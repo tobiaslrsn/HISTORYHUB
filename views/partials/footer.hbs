@@ -1,0 +1,22 @@
+<footer>
+  <div id="footer"></div>
+</footer>
+
+{{#if loggedIn}}
+
+  <div class="user-bar">
+    <div class="the-bar">
+      <a href="/"><i class="bi bi-house-door"></i>
+      </a>
+
+      <a href="/user/dashboard"><i class="bi bi-plus-circle"></i>
+      </a>
+
+      <a href="/user/dashboard/settings"><i class="bi bi-gear"></i>
+      </a>
+
+      <a href="/user/{{username}}"><i class="bi bi-person-circle"></i>
+      </a>
+    </div>
+  </div>
+{{/if}}

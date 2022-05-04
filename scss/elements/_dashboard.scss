@@ -1,0 +1,54 @@
+h3 {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.wrapper {
+  margin-bottom: 10rem;
+}
+.delete-post {
+  outline: none !important;
+  border: none !important;
+  background: none !important;
+  width: 100px !important;
+  color: gray;
+}
+.edit-answer {
+  color: gray;
+}
+.edit-and-delete-post {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.create-container {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      border-radius: 0.7rem;
+      padding: 0.5rem;
+      border: none;
+      background: rgba(255, 166, 0, 0.534);
+      cursor: pointer; //endast på knappen.
+      width: 10rem;
+    }
+    textarea {
+      width: 20rem;
+      resize: none;
+      border-radius: 0.7rem;
+      padding: 0.5rem;
+    }
+  }
+}

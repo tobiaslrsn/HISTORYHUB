@@ -1,0 +1,30 @@
+<div class="homepage-wrapper">
+  <div class="wrapper">
+    <h3>{{user.username}}'s' PROFILE</h3>
+    <img src="{{user.imageUrl}}" alt="image" class="profile-image" />
+
+    <h2>Questions asked by {{user.username}}</h2>
+    <div class="list-container">
+
+      {{#each posts}}
+        <div class="question-container">
+
+          <a href="/post/{{_id}}">
+            <b> TITLE:</b>
+            {{title}}
+          </a>
+
+          <p class="date-posted">
+            {{formatDate postDate}}
+          </p>
+          <br />
+          <p>
+            <b>QUESTION: </b>
+            {{question}}</p>
+
+          <br />
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

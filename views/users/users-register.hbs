@@ -1,0 +1,35 @@
+<div class="register-wrapper">
+  <h2>REGISTER HERE</h2>
+
+  {{imageReq}}
+  <form action="/users/register" method="post" enctype="multipart/form-data">
+    <fieldset>
+      <input type="file" name="image" id="image" />
+    </fieldset>
+
+    <p class="register-error">{{usernameLengthError}}</p>
+    <p class="register-error">{{userTakenError}}</p>
+    <input type="text" name="username" placeholder="username..." />
+
+    <p class="register-error">{{passLengthError}}</p>
+    <p class="register-error">{{confirmPassError}}</p>
+
+    <input type="password" name="password" placeholder="password..." />
+
+    <input
+      type="password"
+      name="confirmPassword"
+      placeholder="confirm password..."
+    />
+    <p class="register-error">{{emailNotValid}}</p>
+
+    <p class="register-error">
+      {{emailInUse}}
+    </p>
+
+    <input type="text" name="email" placeholder="email..." />
+
+    <input type="submit" value="REGISTER" />
+  </form>
+
+</div>

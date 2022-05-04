@@ -1,0 +1,67 @@
+<div class="homepage-wrapper">
+
+  {{#if loggedIn}}
+
+    <div class="wrapper">
+
+      <h3>LATEST POSTS</h3>
+      <div class="list-container">
+        {{#each posts}}
+
+          <div class="question-container">
+            <p class="date-posted">Posted by: </p>
+            <div class="posted-by">
+              <a href="/user/{{askedBy.username}}">
+                {{askedBy.username}}
+              </a>
+              <a href="/user/{{askedBy.username}}">
+                <img src="{{askedBy.imageUrl}}" />
+              </a>
+
+            </div>
+
+            <ul>
+              <li>
+                <a href="/post/{{_id}}"><b>TITLE: </b>
+                  {{title}}
+                </a></li>
+              <li><p class="date-posted">
+                  Asked at:
+                  {{formatDate postDate}}</p></li>
+
+            </ul>
+
+            <div class="question-box">
+              <p> <b>QUESTION: </b>{{question}}</p>
+            </div>
+            <a href="/post/{{_id}}"><i class="bi bi-reply"></i>REPLY</a>
+
+          </div>
+
+        {{/each}}
+      </div>
+
+    </div>
+
+  {{else}}
+
+    <div class="login-wrapper">
+      <div class="wrapper">
+        <h2>LOG IN </h2>
+        {{error}}
+
+        <form action="/login" method="post" class="sign-in-container">
+          <input type="text" name="username" placeholder="username" />
+
+          <input type="password" name="password" placeholder="password" />
+
+          <input type="submit" value="LOGIN" class="login-btn" />
+        </form>
+
+        OR
+        <a href="/users/register">REGISTER HERE</a>
+      </div>
+    </div>
+  {{/if}}
+
+</div>

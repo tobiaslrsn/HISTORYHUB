@@ -1,0 +1,41 @@
+h2 {
+  text-align: center;
+}
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // height: 50%;
+  margin-top: 2rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    .register-error {
+      text-align: center;
+      font-size: 0.7rem;
+    }
+
+    input {
+      width: 15rem;
+      height: 3rem;
+      margin: 0.3rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.7rem;
+      background-color: $orange;
+      border: none;
+      outline: none;
+    }
+    .login-btn {
+      background-color: rgba(128, 128, 128, 0.247);
+      cursor: pointer;
+    }
+    .login-btn:hover {
+      color: gray;
+    }
+  }
+}

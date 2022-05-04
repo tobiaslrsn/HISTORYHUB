@@ -1,0 +1,110 @@
+{{! https://codepen.io/bradtraversy/pen/vMGBjQ }}
+{{#if loggedIn}}
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler" />
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/user/dashboard">DASHBOARD</a></li>
+            <li><a href="/user/dashboard/settings">SETTINGS</a></li>
+            <li>
+              <form action="/log-out" method="post">
+                <input type="submit" value="LOG OUT" class="hamburger-logout" />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{else}}
+
+  <div class="menu-wrap">
+    <input type="checkbox" class="toggler" />
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+      <div>
+        <div>
+          <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/">SIGNIN</a></li>
+            <li><a href="/users/register">REGISTER</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+{{! https://codepen.io/KaioRocha/pen/YoEVvZ }}
+<div class="container">
+  <div class="box">
+
+    <div class="title">
+      <span class="block"></span>
+      <h1>HISTORY HUB<span></span></h1>
+    </div>
+
+    <div class="role">
+      <div class="block"></div>
+      <p>COME &#38; GET ANSWERS</p>
+    </div>
+
+  </div>
+  <div class="links-container">
+    
+
+    {{#if loggedIn}}
+
+        <a href="/user/{{username}}" class="link-to-dashboard">{{username}}
+        </a>
+      </p>
+      {{! DROPDOWN }}
+      <div class="dropdown">
+        <button class="dropbtn">
+          <a href="/user/{{username}}">
+            <img src="{{imageUrl}}" alt="image" />
+          </a>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="/"><i class="bi bi-house-door"></i>
+            HOME
+          </a>
+
+          <a href="/user/{{username}}"><i class="bi bi-person-circle"></i>
+            PROFILE
+          </a>
+
+          <a href="/user/dashboard"><i class="bi bi-plus-circle"></i>
+            DASHBOARD
+          </a>
+
+          <a href="/user/dashboard/settings"><i class="bi bi-gear"></i>
+            SETTINGS
+
+          </a>
+          <a href="">
+            <form action="/log-out" method="post">
+              <input type="submit" value="LOG OUT" class="logout-btn" />
+
+              <i class="bi bi-door-open"></i>
+            </form>
+          </a>
+        </div>
+      </div>
+      {{! !! DROPDOWN }}
+
+    {{else}}
+
+      <a href="/">HOME</a>
+      <a href="/users/register">REGISTER</a>
+      <a href="/">LOG IN</a>
+
+    {{/if}}
+  </div>
+</div>

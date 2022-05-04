@@ -1,0 +1,125 @@
+.homepage-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  // height: 50%;
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sign-in-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .posted-by {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    .list-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include for-phone-only {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        gap: 2rem;
+      }
+
+      .question-container {
+        padding: 2rem;
+        /*     min-width: 300px;
+  
+        max-width: 500px; */
+        width: 350px;
+        height: 100%;
+        display: flex;
+        /* flex-basis: 55vw; */
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        background: rgba(231, 173, 0, 0.507);
+        background: linear-gradient(
+          0deg,
+          rgba(255, 204, 51, 0.671) 0%,
+          rgba(255, 214, 160, 0.651) 100%
+        );
+        border: 1px solid ghostwhite;
+        border-radius: 1rem;
+        word-break: break-word;
+
+        @include for-phone-only {
+          display: flex;
+          width: 80vw;
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+      }
+    }
+  }
+  .bi-reply {
+    font-size: 2rem;
+  }
+
+  form {
+    input {
+      width: 15rem;
+      height: 3rem;
+      margin: 0.5rem;
+      padding: 0.5rem 0.7rem;
+      border-radius: 0.7rem;
+      background-color: $orange;
+      border: none;
+      outline: none;
+    }
+    .login-btn {
+      background-color: rgba(128, 128, 128, 0.247);
+      cursor: pointer;
+    }
+    .login-btn:hover {
+      color: gray;
+    }
+  }
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  // height: 50%;
+
+  a {
+    color: black;
+    width: 10rem;
+
+    background-color: coral;
+    text-align: center;
+  }
+}

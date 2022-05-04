@@ -1,0 +1,74 @@
+<div class="homepage-wrapper">
+  {{#if loggedIn}}
+
+    <div class="wrapper">
+
+      <div class="create-container">
+        <h3>CREATE POST</h3>
+        <form action="/new-post" method="post">
+
+          <input type="text" name="title" placeholder="Add a title" />
+
+          {{questionError}}
+          {{titleError}}
+
+          <textarea
+            name="question"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="What are you wondering?"
+          ></textarea>
+          <input type="submit" value="SAVE" />
+        </form>
+      </div>
+
+      <h2>Your posts</h2>
+      <div class="list-container">
+        {{#each posts}}
+
+          <div class="question-container">
+
+            <a href="/post/{{_id}}"><b>TITLE: </b>
+              {{title}}
+              <p class="date-posted">
+                posted at:
+                {{formatDate postDate}}
+              </p>
+              <b>QUESTION: </b>{{question}}
+            </a>
+
+            <i>
+              <p class="date-posted">
+                (POSTED BY:
+                <a href="/user/{{askedBy.username}}">{{askedBy.username}} </a>
+                )
+              </p>
+            </i>
+            <div class="edit-and-delete-post">
+              <p>
+                <a href="/post/{{_id}}/edit" class="edit-answer"><p
+                    class="date-posted edit-answer"
+                  >
+                    UPDATE</p></a>
+                <form
+                  action="/post/{{_id}}/delete"
+                  method="post"
+                  class="delete-post"
+                >
+                  <input type="submit" value="DELETE" class="delete-post" />
+                </form>
+              </p>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+    </div>
+  {{else}}
+
+    DU FÅR INTE VA HÄR
+
+  {{/if}}
+
+  <p>{{askedBy.name}}</p></div>

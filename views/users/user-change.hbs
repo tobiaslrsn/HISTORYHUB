@@ -1,0 +1,24 @@
+<div class="edit-wrapper">
+  <h2>Change Username</h2>
+
+  <form action="/user/dashboard/change" method="post" class="edit-answer">
+    <input
+      type="text"
+      name="username"
+      placeholder="New username"
+      value="{{username}}"
+      class="edit-user-input"
+    />
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Confirm and/or Change Email"
+      value="{{email}}"
+      class="edit-user-input"
+    />
+    <br />
+
+    <input type="submit" value="Change" class="edit-btn" />
+  </form>
+</div>

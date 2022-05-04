@@ -1,0 +1,74 @@
+{{#if loggedIn}}
+
+  <div class="new-post-container">
+    <div class="one-answer">
+
+      <p><b>TITLE: </b>{{post.title}}</p>
+      <p class="date-posted">ASKED AT: {{formatDate post.postDate}} </p>
+
+      <b>QUESTION: </b><p>{{post.question}}</p>
+      ASKED BY:
+      <a href="/user/{{username}}"><p class="date-posted">
+          Asked by:
+          {{username}}</p>
+      </a>
+    </div>
+
+    <div class="create-container">
+
+      {{answerEmpty}}
+      <form action="/new-answer/{{post._id}}" method="post">
+
+        <textarea
+          name="answer"
+          cols="30"
+          rows="10"
+          placeholder="Post your answer..."
+        ></textarea>
+
+        <input type="submit" value="SAVE" />
+      </form>
+    </div>
+    <h2>Answers: </h2>
+  </div>
+  <div class="list-container">
+
+    {{#each answers}}
+
+      <ul class="one-answer">
+
+        <p class="answered-by">Answered by: </p>
+        <li>
+          <div class="posted-by">
+            <a href="/user/{{answeredBy.username}}">{{answeredBy.username}}</a>
+            <img src="{{answeredBy.imageUrl}}" alt="image" />
+          </div>
+        </li>
+
+        <p class="date-posted">Answered on: {{formatDate answeredOn}}</p>
+
+        <li class="li-answer">
+          <b>ANSWER: </b>
+          {{answer}}</li>
+        <div class="edit-and-delete-post">
+          <p>
+            <a href="/new-answer/{{_id}}/change" class="edit-answer"><p
+                class="edit-answer date-posted"
+              >Edit Answer</p></a>
+            <form
+              action="/answer/{{_id}}/delete"
+              method="post"
+              class="delete-post"
+            >
+              <input type="submit" value="Delete" class="delete-post" />
+            </form>
+          </p>
+        </div>
+      </ul>
+
+    {{/each}}
+  </div>
+
+{{else}}
+  YOU ARE NOT LOGGED IN
+{{/if}}

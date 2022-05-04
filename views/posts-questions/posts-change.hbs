@@ -1,0 +1,27 @@
+<div class="edit-wrapper">
+
+  {{! obs action / qestion  name:textarea id: qestion  value: {qestion} }}
+
+  <form action="/post/{{_id}}/edit" method="post" class="edit-answer">
+
+    <h4>Update title:</h4>
+    <input
+      type="text"
+      name="title"
+      placeholder="title"
+      class="edit-answer-input"
+      value="{{title}}"
+    />
+
+    <h4>Update your question:</h4>
+    <textarea
+      name="question"
+      cols="30"
+      rows="10"
+      class="edit-answer-input"
+      placeholder="Question"
+    >{{question}}</textarea>
+
+    <input type="submit" value="UPDATE" class="edit-btn" />
+  </form>
+</div>

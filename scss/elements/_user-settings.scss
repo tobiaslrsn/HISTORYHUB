@@ -1,0 +1,56 @@
+.user-settings-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+
+  .settings-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    background: rgba(231, 173, 0, 0.507);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 204, 51, 0.671) 0%,
+      rgba(255, 214, 160, 0.651) 100%
+    );
+    border-radius: 0.7rem;
+  }
+}
+
+.wrapper-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.edit-user-input {
+  border: none;
+  outline: none;
+  width: 20rem;
+  height: 3.5rem;
+  background-color: rgba(255, 191, 0, 0.237);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-btn {
+  font-size: 2rem;
+  color: gray;
+  margin: 0.5rem;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.edit-btn:hover {
+  color: rgba(255, 166, 0, 0.527);
+}

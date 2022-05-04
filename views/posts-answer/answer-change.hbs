@@ -1,0 +1,16 @@
+<div class="edit-wrapper">
+  <h2>Change answer</h2>
+
+  <form action="/new-answer/{{id}}/change" method="post" class="edit-answer">
+
+    <textarea
+      name="answer"
+      cols="30"
+      rows="10"
+      class="edit-answer-input"
+    >{{answer}}
+    </textarea>
+
+    <input type="submit" value="UPDATE" class="edit-btn" />
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="wrapper-settings">
+  <img src="{{imageUrl}}" alt="image" class="profile-image" />
+  <p class="date-posted">Logged in as: {{user.username}}</p>
+
+  <div class="user-settings-container">
+
+    <a href="/user/dashboard/change" class="settings-box">USER SETTINGS</a>
+
+    <a href="/user/dashboard/delete" class="settings-box">DELETE ACCOUNT</a>
+
+    <form action="/log-out" method="post" class="settings-box">
+      <input type="submit" value="LOG OUT" class="logout-btn" />
+    </form>
+  </div></div>
